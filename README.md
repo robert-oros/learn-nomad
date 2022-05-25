@@ -1,6 +1,6 @@
 
 # Nomad
-- [Install] (https://www.nomadproject.io/docs/install)
+- [Install](https://www.nomadproject.io/docs/install)
 - [Nomad Deployment Guide](https://learn.hashicorp.com/tutorials/nomad/production-deployment-guide-vm-with-consul#start-nomad)
 
 # Commands
