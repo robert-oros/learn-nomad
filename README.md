@@ -19,8 +19,24 @@ server {
   bootstrap_expect = 1
 }
 ```
-
-## **2. Client**
+---
+## **2. Job**
+### _job.nomad_
+```
+job "web" {
+    datacenters = ["dc1"]
+    group "api" {
+       task "webserver" {
+         driver = "exec"
+         config {
+             command = "./binary"
+         }
+       }
+    }
+}
+```
+---
+## **3. Client**
 ### Run clinet
 ```
 sudo nomad agent -config=server.conf
@@ -34,5 +50,4 @@ client {
   enabled = true
   servers = ["10.182.0.28:4647"] # ip of server
 }
-
 ```
