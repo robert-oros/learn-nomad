@@ -1,6 +1,6 @@
 
 # Nomad
-- [Install](https://www.nomadproject.io/docs/install)
+- [Install Nomad](https://www.nomadproject.io/docs/install)
 - [Nomad Deployment Guide](https://learn.hashicorp.com/tutorials/nomad/production-deployment-guide-vm-with-consul#start-nomad)
 
 # Commands
@@ -21,7 +21,7 @@ server {
 ```
 
 ## **2. Client**
-### Run clinet
+### Run client
 ```
 sudo nomad agent -config=server.conf
 ```
