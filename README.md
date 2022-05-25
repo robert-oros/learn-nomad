@@ -1,6 +1,6 @@
 
 # Nomad
-- [Install] (https://www.nomadproject.io/docs/install)
+- [Install Nomad](https://www.nomadproject.io/docs/install)
 - [Nomad Deployment Guide](https://learn.hashicorp.com/tutorials/nomad/production-deployment-guide-vm-with-consul#start-nomad)
 
 # Commands
@@ -41,7 +41,7 @@ job "web" {
 ```
 sudo nomad agent -config=server.conf
 ```
-### clinet.conf_
+### _clinet.conf_
 ```
 datacenter = "dc1"
 data_dir = "/opt/nomad"
