@@ -25,7 +25,7 @@ server {
 ```
 sudo nomad agent -config=server.conf
 ```
-### clinet.conf_
+### _clinet.conf_
 ```
 datacenter = "dc1"
 data_dir = "/opt/nomad"
