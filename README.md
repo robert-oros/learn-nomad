@@ -1,9 +1,11 @@
 
-# Nomad
+# Install Nomad
+---
 - [Install Nomad](https://www.nomadproject.io/docs/install)
 - [Nomad Deployment Guide](https://learn.hashicorp.com/tutorials/nomad/production-deployment-guide-vm-with-consul#start-nomad)
 
 # Commands
+---
 ## **1. Server**
 ### Run server
 ```
@@ -19,8 +21,9 @@ server {
   bootstrap_expect = 1
 }
 ```
----
+
 ## **2. Job**
+---
 ### _job.nomad_
 ```
 job "web" {
@@ -35,8 +38,17 @@ job "web" {
     }
 }
 ```
----
+Run job
+```
+nomad job run job.nomad
+```
+Remove job
+```
+nomad job stop -purge <ID>
+```
+
 ## **3. Client**
+---
 ### Run clinet
 ```
 sudo nomad agent -config=server.conf
