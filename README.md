@@ -22,7 +22,6 @@ Run agent with conf
 sudo nomad agent -config=server.conf
 ```
 ## 2. Job
----
 ### _`job.nomad`_
 ```
 job "web" {
@@ -50,7 +49,6 @@ See status
 nomad status <ID>
 ```
 ## 3. Client
----
 ### `clinet.conf`
 ```
 datacenter = "dc1"
