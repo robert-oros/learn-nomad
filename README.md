@@ -1,17 +1,13 @@
 
 # Install Nomad
----
 - [Install Nomad](https://www.nomadproject.io/docs/install)
 - [Nomad Deployment Guide](https://learn.hashicorp.com/tutorials/nomad/production-deployment-guide-vm-with-consul#start-nomad)
+- [Keywords - datacenter, data_dir etc.](https://www.nomadproject.io/docs/configuration)
+- Agent is a server that runs on every machine. You can run agent in server mode or client mode. Server agent is the brain of the cluster [read more...](https://circleci.com/docs/2.0/nomad/)
 
 # Commands
----
-## **1. Server**
-### Run server
-```
-sudo nomad agent -config=server.conf
-```
-### _server.conf_
+## 1. Server
+### `server.conf`
 ```
 datacenter = "dc1"
 data_dir = "/opt/nomad"
@@ -21,10 +17,13 @@ server {
   bootstrap_expect = 1
 }
 ```
-
-## **2. Job**
+Run agent with conf
+```
+sudo nomad agent -config=server.conf
+```
+## 2. Job
 ---
-### _job.nomad_
+### _`job.nomad`_
 ```
 job "web" {
     datacenters = ["dc1"]
@@ -46,14 +45,13 @@ Remove job
 ```
 nomad job stop -purge <ID>
 ```
-
-## **3. Client**
+See status
+```
+nomad status <ID>
+```
+## 3. Client
 ---
-### Run clinet
-```
-sudo nomad agent -config=server.conf
-```
-### _clinet.conf_
+### `clinet.conf`
 ```
 datacenter = "dc1"
 data_dir = "/opt/nomad"
@@ -62,4 +60,8 @@ client {
   enabled = true
   servers = ["10.182.0.28:4647"] # ip of server
 }
+```
+Run client
+```
+sudo nomad agent -config=server.conf
 ```
