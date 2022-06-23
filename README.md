@@ -61,5 +61,5 @@ client {
 ```
 Run client
 ```
-sudo nomad agent -config=server.conf
+sudo nomad agent -config=client.conf
 ```
