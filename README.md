@@ -1,9 +1,17 @@
 
 # Install Nomad
 - [Install Nomad](https://www.nomadproject.io/docs/install)
+- [Resolved-warning-apt-key-is-deprecated](https://tecadmin.net/resolved-warning-apt-key-is-deprecated/)
+
 - [Nomad Deployment Guide](https://learn.hashicorp.com/tutorials/nomad/production-deployment-guide-vm-with-consul#start-nomad)
 - [Keywords - datacenter, data_dir etc.](https://www.nomadproject.io/docs/configuration)
 - Agent is a server that runs on every machine. You can run agent in server mode or client mode. Server agent is the brain of the cluster [read more...](https://circleci.com/docs/2.0/nomad/)
+
+# Install Nomad
+-  wget -nc https://apt.releases.hashicorp.com/gpg
+- cat gpg | gpg --dearmor | sudo tee /usr/share/keyrings/etc/apt/trusted.gpg > /dev/null 2>&1
+- yes | sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+- sudo apt-get update && sudo apt-get install nomad
 
 # Commands
 ## 1. Server
